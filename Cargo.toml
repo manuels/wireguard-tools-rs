@@ -1,0 +1,22 @@
+[package]
+name = "wireguard-tools-rs"
+version = "0.1.0"
+authors = ["Manuel Schölling <manuel.schoelling@gmx.de>"]
+edition = "2018"
+description = "A port of wireguard's embeddable library"
+license = "LGPL-2.1+"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+nix = "0.17.0"
+libc = "0.2.69"
+sodiumoxide = "0.2.5"
+
+[build-dependencies]
+bindgen = "0.53.2"
+cc = "1.0.52"
+
+[dev-dependencies]
+netns = "0.1.0"
+sudo = "0.3"
