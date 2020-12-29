@@ -71,7 +71,7 @@ impl Device {
             return Err(ErrorKind::InvalidInput.into())
         }
 
-        let bytes = unsafe { &*(&bytes[..] as *const [u8] as *const [i8]) };
+        let bytes = unsafe { &*(&bytes[..] as *const [u8] as *const [::std::os::raw::c_char]) };
         self.inner_mut().name[..].clone_from_slice(bytes);
         Ok(())
     }
